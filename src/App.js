@@ -6,6 +6,7 @@ import Movies from "./component/movies";
 import Login from "./component/login";
 import SignUp from "./component/signup";
 import ForgotPass from "./component/forgotpass";
+import ResetPassword from './component/resetpass';
 import "./App.css";
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
           <Route path="/login" exact component={Login} />
           <Route path="/signup" exact component={SignUp} />
           <Route path="/forgotpass" exact component={ForgotPass} />
+          <Route path="/resetpassword" exact component={ResetPassword} />
         </Switch>
       </Router>
     );

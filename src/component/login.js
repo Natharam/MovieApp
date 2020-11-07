@@ -5,8 +5,8 @@ const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  let data1 = localStorage.getItem("userdata");;
-  let data = JSON.parse(data1);
+  const data1 = localStorage.getItem("userdata");;
+  const data = JSON.parse(data1);
 
   const validateUser = () => {
     let signedEmail = data.email;
@@ -21,11 +21,11 @@ const Login = (props) => {
     e.preventDefault();
     let valid = validateUser();
     if (valid) {
+      localStorage.setItem('valid', JSON.stringify(valid))
       props.history.push('/')
     }
     console.log(data);
   };
-
 
   return (
     <div id="form_wrapper">

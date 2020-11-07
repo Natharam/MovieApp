@@ -2,14 +2,26 @@ import React from "react";
 import "../assets/component/header.css";
 
 const Header = (props) => {
-  console.log(props);
+  let value = localStorage.getItem("valid");
+  let obj = JSON.parse(value);
+  let clickHandler = () => {
+    console.log(obj);
+    if (obj) {
+      obj = false;
+      localStorage.setItem("valid", obj);
+    } else {
+      return;
+    }
+  };
   return (
     <div className="nav">
       <nav className="nav1">
         <label className="logo">Demo Streaming</label>
         <ul>
           <li>
-            <a href="/login">Login</a>
+            <a onClick={clickHandler} href={obj ? "/" : "/login"}>
+              {obj ? "Logout" : "Login"}
+            </a>
           </li>
           <li>
             <a className="anchor" href="/">

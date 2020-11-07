@@ -1,20 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../assets/component/login.css";
 
-const ForgotPass = () => {
+const ForgotPass = (props) => {
   const [email, setEmail] = useState("");
-  const [data, setData] = useState("");
 
-  const data1 = localStorage.getItem("userdata");
-  setData(JSON.parse(data1));
+  const data1 = localStorage.getItem("userdata");;
+  const data = JSON.parse(data1);
 
-  // const validate = () => {
-
-  // }
+  const validateUser = () => {
+    let signedEmail = data.email;
+    if (signedEmail === email) {
+      return true
+    }
+    return false
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(JSON.parse(data1));
+    let valid = validateUser();
+    if (valid) {
+      props.history.push('/resetpassword')
+    }
+    else {
+      alert('Given Email Address is not Registered')
+    }
   };
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/component/login.css";
+// import formValidate from './formValidate';
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -13,9 +14,10 @@ const SignUp = () => {
   };
 
   const handleSubmit = (e) => {
-    localStorage.setItem("userdata", JSON.stringify(payLoad));
     e.preventDefault();
-    console.log(payLoad);
+
+    localStorage.setItem("userdata", JSON.stringify(payLoad));
+    return true;
   };
 
   return (
@@ -32,6 +34,7 @@ const SignUp = () => {
             id="field_name"
             className="input_field"
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
         <div className="input_container">
@@ -44,6 +47,7 @@ const SignUp = () => {
             id="field_email"
             className="input_field"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
         <div className="input_container">
@@ -56,6 +60,7 @@ const SignUp = () => {
             id="field_password"
             className="input_field"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </div>
         <input
