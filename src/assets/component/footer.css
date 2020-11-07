@@ -1,0 +1,163 @@
+.footer {
+  box-sizing: border-box;
+  margin-top: auto;
+  background-color: #111;
+  padding-top: 20px;
+  height: 140px;
+}
+
+.footer-links {
+  position: absolute;
+  color: #ffffff;
+  margin-left: 80px;
+}
+
+.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 80px;
+  margin-top: 80px;
+}
+
+.para {
+  margin-top: 10px;
+}
+
+.social-container {
+  align-self: center;
+  display: flex;
+}
+
+.fb {
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.twitter {
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.instagram {
+  color: #ffffff;
+}
+
+.app-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+}
+
+.google {
+  margin-right: 25px;
+  border-radius: 5px;
+  width: 90px;
+  height: 26px;
+}
+
+.apple {
+  margin-right: 25px;
+  border-radius: 5px;
+  width: 90px;
+  height: 26px;
+}
+
+.microsoft {
+  border-radius: 5px;
+  width: 90px;
+  height: 26px;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) and (max-width: 1191px) {
+  .footer {
+    height: 150px;
+  }
+
+  .footer-links {
+    margin-left: 60px;
+  }
+
+  .footer-container {
+    margin-left: 60px;
+  }
+
+  .app-container {
+    float: right;
+    margin-right: 20px;
+  }
+
+  .google {
+    margin-right: 15px;
+    border-radius: 2px;
+    width: 70px;
+    height: 20px;
+  }
+
+  .apple {
+    margin-right: 15px;
+    border-radius: 2px;
+    width: 70px;
+    height: 20px;
+  }
+
+  .microsoft {
+    margin-right: 15px;
+    border-radius: 2px;
+    width: 70px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .footer {
+    height: 150px;
+  }
+
+  .footer-links {
+    margin-left: 30px;
+  }
+
+  .footer-container {
+    margin-left: 30px;
+  }
+
+  .social-container {
+    margin-top: 10px;
+  }
+
+  .app-container {
+    float: right;
+    margin: 10px;
+  }
+
+  .google {
+    margin-right: 10px;
+    border-radius: 2px;
+    width: 50px;
+    height: 20px;
+  }
+
+  .apple {
+    margin-right: 10px;
+    border-radius: 2px;
+    width: 50px;
+    height: 20px;
+  }
+
+  .microsoft {
+    margin-right: 10px;
+    border-radius: 2px;
+    width: 50px;
+    height: 20px;
+  }
+}
+

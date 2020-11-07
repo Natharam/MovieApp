@@ -1,0 +1,39 @@
+.home {
+  box-sizing: border-box;
+}
+
+.home-links {
+  list-style: none;
+  margin-left: auto;
+  margin-right: 60px;
+  line-height: 36px;
+  justify-self: space-around;
+  display: flex;
+  height: 40px;
+}
+
+.home-links li {
+  box-sizing: border-box;
+  display: block;
+  align-self: center;
+  padding: 0 15px;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: 700px;
+  font-family: "Poppins", sans-serif;
+  width: auto;
+  background: rgb(233, 233, 233);
+}
+
+.home-bg {
+    height: 520px;
+    width: 100%;
+    background-image: url(../images/bgimg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media (min-width: px) and (max-width: 767px) {
+  .home-links {
+  }
+}

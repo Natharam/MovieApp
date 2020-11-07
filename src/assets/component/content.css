@@ -1,0 +1,31 @@
+.content {
+  display: flex;
+}
+
+.series {
+  height: 110px;
+  width: 70px;
+  padding: 13px;
+  background-color: rgb(37, 35, 35);
+  color: white;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.movies {
+  height: 110px;
+  width: 70px;
+  padding: 9px;
+  background-color: rgb(37, 34, 34);
+  color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.series-content {
+  margin-top: 28px;
+}
+
+.movies-content {
+  margin-top: 33px;
+}
