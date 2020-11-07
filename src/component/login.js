@@ -1,16 +1,31 @@
 import React, { useState } from "react";
 import "../assets/component/login.css";
 
-const Login = () => {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  let data1 = localStorage.getItem("userdata");
+  let data1 = localStorage.getItem("userdata");;
+  let data = JSON.parse(data1);
+
+  const validateUser = () => {
+    let signedEmail = data.email;
+    let signedPassword = data.password;
+    if (signedEmail === email && signedPassword === password) {
+      return true
+    }
+    return false
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data1);
+    let valid = validateUser();
+    if (valid) {
+      props.history.push('/')
+    }
+    console.log(data);
   };
+
 
   return (
     <div id="form_wrapper">

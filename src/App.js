@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./component/home";
 import Series from "./component/series";
@@ -7,6 +6,7 @@ import Movies from "./component/movies";
 import Login from "./component/login";
 import SignUp from "./component/signup";
 import ForgotPass from "./component/forgotpass";
+import "./App.css";
 
 class App extends Component {
   constructor() {
